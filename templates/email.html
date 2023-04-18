@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="https://stori-logo-m23745.s3.amazonaws.com/public/Stori-horizontal-11.jpg" alt="Stori" width="628" height="213">
+    <h1>Stori - Transactions summary</h1>
+    <table style="font-size: 18px">
+        {% for key, value in data.items() %}
+            {% if key == 'Months Transactions:' %}
+                <tr>
+                    <td>{{ key }}</td>
+                </tr>
+                {% for key2, value2 in data[key].items() %}
+                    <tr>
+                        <td></td>
+                        <td>{{ key2 }}</td>
+                        <td>{{ value2 }}</td>
+                    </tr>
+                {% endfor %}
+            {% elif key == 'Months Credit Average:' %}
+                <tr>
+                    <td>{{ key }}</td>
+                </tr>
+                {% for key2, value2 in data[key].items() %}
+                    <tr>
+                        <td></td>
+                        <td>{{ key2 }}</td>
+                        <td>{{ value2 }}</td>
+                    </tr>
+                {% endfor %}
+            {% elif key == 'Months Debit Average:' %}
+                <tr>
+                    <td>{{ key }}</td>
+                </tr>
+                {% for key2, value2 in data[key].items() %}
+                    <tr>
+                        <td></td>
+                        <td>{{ key2 }}</td>
+                        <td>{{ value2 }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>
