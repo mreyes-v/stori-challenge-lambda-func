@@ -7,7 +7,7 @@ The project consist of two modules:
 1. Web-API
 2. Lambda Function
 
-### WEB - API
+### Lambda Function
 
 This repo corresponds to the Lambda Function, which contain the handler for the trigger when a .csv file is uploaded to
 an S3 Bucket, it will parse the file and insert the transactions to DynamoDB, then it will retrieve all the DynamoDB
